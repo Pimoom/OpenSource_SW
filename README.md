@@ -1,8 +1,9 @@
 OpenSource_SW_Assignment
 =============
 
-## 1. top
-<img src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fci8zKv%2Fbtq2CIKurSw%2FHL8qM97SxJkGY8No3T7kYk%2Fimg.png" width = "80%" height = "80%" >
+## 1. top  
+`$ top`  
+<img src = "top 명령어.png" width = "80%" height = "80%" >  
 CPU사용률이 높은거부터 5초간격으로 업데이트 하여 보여줌
 
 * __top__  
@@ -22,4 +23,47 @@ CPU사용률이 높은거부터 5초간격으로 업데이트 하여 보여줌
 * __Mem,Swap__  
   -메모리와 swap 메모리에 관한 정보
 * __프로세스의 상태__   
-## 2. ps
+
+## 2. ps (-ef)
+`$ ps -ef`  
+<img src = "ps (-ef).png" width = "80%" height = "80%" >  
+현재 작동중인 프로세스를 확인할수 있음
+
+* __UID__  
+  - 프로세스 소유자의 이름
+* __PID__  
+  - 프로세스의 ID
+* __PPID__  
+  - 부모 프로세스의 ID
+* __C__  
+  - 짧은 시간동안의 CPU 사용률
+* __STIME__  
+  - 프로세스가 시작된 날짜,시간 등
+* __TTY__  
+  - 프로세스와 연결된 터미널
+* __TIME__  
+  - 총 CPU 사용 시간
+
+## 3. jobs
+작업의 상태를 표시하는 명령어
+* __Running__  
+  - 작업이 진행중
+* __Done__  
+  - 작업이 완료되어 0 반환
+* __Done(code)__  
+  - 작업이 종료되어 code 반환
+* __Stoppend__  
+  - 작업이 일시 중  
+
+|옵션|설명|
+|-----|-----|
+|-l|프로세스 그룹 ID를 state 필드 앞에 출력|
+|-n|프로세스 그룹 중 대표 프로세스 ID 출력|
+|-p|각 프로세스 ID에 대해 한 행씩 출|
+|command|지정한 명령어를 실행|
+
+## 4. kill
+프로세스를 종료시킬때 사용  
+`$ kill (PID)` PID번호는 `ps (-ef)`명령어를 사용하여 찾기  
+`kill -9` 명령어는 `kill`보다 강력  
+윈도우의 작업관리자의 작업 끝내기와 유사  
